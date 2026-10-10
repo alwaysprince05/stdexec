@@ -294,7 +294,7 @@ namespace experimental::execution
   // every transparent adaptor back to the identity transformation.
   template <class _Tag, class _Env, class _Data>
   using __custom_child_env_fn_t =
-    typename __sequence_adaptor_traits<_Tag>::template __child_env_fn<_Env, _Data>;
+    __sequence_adaptor_traits<_Tag>::template __child_env_fn<_Env, _Data>;
 
   // The function object that transforms the environment of a transparent
   // sequence adaptor: the adaptor's traits may define a nested
